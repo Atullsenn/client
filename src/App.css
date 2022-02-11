@@ -1,38 +1,108 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: column;
+  box-sizing: border-box;
+  
+}
+.inputs{
+  height: 25rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(34, 18, 104)
+  
+}
+.inputs input{
+  width: 12.5rem;
+  height: 3.125rem;
+  font-size: 1.125rem;
+  margin: .625rem;
+  padding-left: .625rem;
+  border-radius: 10px 25px;
+}
+.inputs button{
+  border: none;
+  width: 9.375rem;
+  height: 3.125rem;
+  background-color: rgb(9, 2, 36);
   color: white;
+  border-radius: 8px;
+  font-size: 16px;
+}
+.listOfFriends{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.friendContainer{
+  display: flex;
+  flex-direction: row;
+
+}
+.friendContainer button{
+  width: 3.75rem;
+  height: 3.75rem;
+  border: 2px solid black;
+  background-color: rgb(9, 2, 36);
+  color: white;
+
 }
 
-.App-link {
-  color: #61dafb;
+.friend{
+  width: 25rem;
+  height: 3.75rem;
+  background-color: rgb(34, 18, 104);
+  color: white;
+  margin: 5px;
+  display: flex;
+  font-size: medium;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#removeBtn{
+  border-left: none;
+}
+.friend h3{
+  margin-left: 10px;
+}
+.friendContainer button{
+  margin-top: 5px;
+}
+@media only screen and (max-width: 450px){
+  .friend{
+    width: auto;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+    flex-direction: column;
+    border-radius: 10px;
+    
   }
-  to {
-    transform: rotate(360deg);
+  .friendContainer button{
+    flex-direction: row;
+    width: 200px;
+    margin-left: 15px;
+    justify-content: center;
+    align-items: center;
+    border-radius:30px;
+
+  }
+  .friendContainer{
+    display: flex;
+    flex-direction:column ;
+    width: 250px;
+  }
+  .inputs{
+    width: 300px;
+    margin: 10px;
+    border-radius: 10px 35px;
+
+    
+  }
+  .inputs input{
+    border-radius: 10px 30px;
   }
 }
